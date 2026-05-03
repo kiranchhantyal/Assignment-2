@@ -11,11 +11,11 @@
 public class Cluster implements ClusterInterface
 {
     // final instance variables
-COMPLETE ME!
+// (none needed)
 
     
     // instance variables
-COMPLETE ME!
+protected Node firstPlayer;
 
 
 	/**
@@ -28,7 +28,7 @@ COMPLETE ME!
 	 */
     public Cluster()
     {
-COMPLETE ME!
+        firstPlayer = null;
     }
 
 	/**
@@ -43,7 +43,7 @@ COMPLETE ME!
 	 */
     public boolean isEmpty()
     {
-COMPLETE ME! // to get past the compiler, use: return true;
+return firstPlayer == null; // to get past the compiler, use: return true;
     }
 
     /**
@@ -59,8 +59,32 @@ COMPLETE ME! // to get past the compiler, use: return true;
 	 */
     public void addPlayerToCluster(Player p)
     {
-COMPLETE ME!
-    }
+
+		Node current = firstPlayer;
+		Node previous = null;
+		// Step 1: check if payer exists -> merge
+		while (current != null)
+		{
+			Player existing =(Player) current.getData();
+		if (existing.getName().equals(p.getName()))
+			{
+				existing.update(p);
+				return;
+			}
+			previous = current;
+			current = current.getNext();
+		}
+	}
+
+ 	/**
+	 * getFirstPlayer()
+	 * 
+	 * @return Player -- the first player in the cluster
+    while (current != null)
+	{
+
+	}
+	}
 
  	/**
 	 * getFirstPlayer()
