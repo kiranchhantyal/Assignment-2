@@ -74,8 +74,17 @@ return firstPlayer == null; // to get past the compiler, use: return true;
 			previous = current;
 			current = current.getNext();
 		}
-	}
-
+		if (previous == null && ((Player) current.getData()).getName().compareTo(p.getName())< 0)
+		{
+			newNode.setNext(firstPlayer);
+			firstPlayer = newNode;
+		}
+		else 
+		{
+			newNode.setNext(current);
+			previous.setNext(newNode);
+		}
+	
  	/**
 	 * getFirstPlayer()
 	 * 
@@ -98,7 +107,11 @@ return firstPlayer == null; // to get past the compiler, use: return true;
 	 */
     public Player getFirstPlayer()
     {
-COMPLETE ME! // to get past the compiler, use: return null;
+        if (firstPlayer != null)
+		{
+			return null;
+		}
+		return (Player) firstPlayer.getData();
     }
 
    /**
@@ -113,7 +126,14 @@ COMPLETE ME! // to get past the compiler, use: return null;
 	 */
     public int countPlayers()
     {
-COMPLETE ME! // to get past the compiler, use: return 0;
+        int count = 0;
+        Node current = firstPlayer;
+        while (current != null)
+        {core C
+            count++;
+            current = current.getNext();
+        }
+        return count;
     }
 
     /**
@@ -135,8 +155,23 @@ COMPLETE ME! // to get past the compiler, use: return 0;
 	 */
     public Player most(char x)
     {
-COMPLETE ME! // to get past the compiler, use: return null;
-    }
+if (isEmpty()) // to get past the compiler, use: return null;
+    {
+		return null;
+	}
+	Node current = firstPlayer;
+	Player best = (Player) current.getData();
+	while (current != null)
+		Player p = (Player) current.getData();
+	if (getStat(p, x) >= getStat(best, x))
+	{
+		best = p;
+	}
+	current = current.getNext();
+}
+return best;
+
+}
 
     /**
 	 * summary()
@@ -150,9 +185,20 @@ COMPLETE ME! // to get past the compiler, use: return null;
 	 */
     public String summary()
     {
-COMPLETE ME! // to get past the compiler, use: return "";
+ // to get past the compiler, use: return "";
+ if (isEmpty())
+    {
+        return "No data.";
     }
+	Player total = new Player("Total", 0, 0, 0, 0, 0, 0, 0, 0,0 );
+Node current = firstPlayer;
+while (current != null)
+{
 
+	total.update((Player) current.getData());
+	current = current.getNext();
+}
+return total.toString();
 	/**
 	 * toString()
 	 * 
