@@ -197,7 +197,7 @@ while (current != null)
 
 	total.update((Player) current.getData());
 	current = current.getNext();
-}
+}}
 return total.toString();
 	/**
 	 * toString()
@@ -213,6 +213,27 @@ return total.toString();
 	 */
     public String toString()
     {
-COMPLETE ME! // to get past the compiler, use: return "";
-    }
+ // to get past the compiler, use: return "";
+ String result = "";
+ Node current = firstPlayer;
+ while (current != null)
+ {
+     result += current.getData().toString();
+     current = current.getNext();
+ }
+ return result;
+}
+private int getStat(Player p, char x)
+{
+	switch (x)
+	{
+		case 'a': return p.getFreesAgainst();
+		case 'd': return p.getClangers();
+		case 'c': return p.getDisposals();
+		case 'g': return p.getGoals();
+		case 'm': return p.getGames();
+		default: return 0;
+	}
+}
+
 }
