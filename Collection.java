@@ -11,11 +11,11 @@
 public class Collection implements CollectionInterface
 {
     // final instance variables
-COMPLETE ME!
+// (none needed)
 
     
     // instance variables
-COMPLETE ME!
+protected Node firstTeam;
 
     
 	/**
