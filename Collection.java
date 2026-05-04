@@ -43,7 +43,8 @@ firstTeam = null;
 	 */
     public boolean isEmpty()
     {
-COMPLETE ME! // to get past the compiler, use: return true;
+ // to get past the compiler, use: return true;
+ return firstTeam == null;
     }
 
     /**
@@ -60,7 +61,47 @@ COMPLETE ME! // to get past the compiler, use: return true;
 	 */
     public void addPlayerToCollection(Player p)
     {
-COMPLETE ME!
+        Node current = firstTeam;
+        Node previous = null;
+
+        // check if team already exists
+        while (current != null) {
+            Cluster c = (Cluster) current.getData();
+            Player first = c.getFirstPlayer();
+            if(first != null && first.getTeam().equals(p.getTeam())) {
+                c.addPlayerToCluster(p);
+                return;
+            }
+            previous = current;
+            current = current.getNext();
+        }
+        // create new cluster
+        Cluster newCluster = new Cluster();
+        newCluster.addPlayerToCluster(p);
+
+        Node newNode = new Node(newCluster);
+        // insert alphabetically
+        current = firstTeam;
+        previous = null;
+        while (current != null)
+        {
+            Cluster c = (Cluster) current.getData();
+            Player first = c.getFirstPlayer();
+            if (first != null && first.getTeam().compareTo(p.getTeam()) > 0)
+            {
+            break;
+
+        }
+        previous = current;
+        current = current.getNext();
+    }
+        if (previous == null) {
+            newNode.setNext(firstTeam);
+            firstTeam = newNode;
+        } else {
+            previous.setNext(newNode);
+            newNode.setNext(current);
+        }
     }
 
     /**
@@ -77,8 +118,33 @@ COMPLETE ME!
 	 */
     public void showPlayerHistogram()
     {
-COMPLETE ME!
-    }
+     if (isEmpty()) {
+        System.out.println("No data!");
+        return;
+        }
+
+        Node current = firstTeam;
+
+        while (current != null)
+             {
+            Cluster c = (Cluster) current.getData();
+            Player first = c.getFirstPlayer();
+            if (first != null) {
+                String teamName = first.getTeam();
+                int count = c.countPlayers();
+
+                // print team name
+                System.out.print(" " + teamName + " | ");
+
+                // print stars
+                for(int i = 0; i < count; i++) {
+                    System.out.print("*");
+                }
+                // print count
+                System.out.println(" " + count );
+            }
+            current = current.getNext();
+    }}
 
     /**
 	 * most()
