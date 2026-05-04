@@ -28,7 +28,7 @@ protected Node firstTeam;
 	 */
     public Collection()
     {
-COMPLETE ME!
+firstTeam = null;
     }
 
 	/**
