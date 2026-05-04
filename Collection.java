@@ -165,7 +165,23 @@ firstTeam = null;
      */
     public String most(char x)
     {
-COMPLETE ME! // to get past the compiler, use: return "";
+ // to get past the compiler, use: return "";
+ if (isEmpty()) {
+        return "No data!";
+    }
+    Node current = firstTeam;
+    Player best = null;
+    while (current != null) {
+        Cluster c = (Cluster) current.getData();
+        Player p = c.most(x);
+        if (p != null) {
+            if (best == null || p.getStat(x) >= best.getStat(x)) {
+                best = p;
+            }
+        }
+        current = current.getNext();
+    }
+    return best.toString();
     }
 
     /**
