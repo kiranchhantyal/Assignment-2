@@ -3,7 +3,7 @@
  * 
  * KIT107 Assignment 2 -- Harness Class
  * 
- * @author Julian Dermoudy
+ * @author Kiran Chhantyal(770872)
  * @version	28/3/2026
  * 
  * FILE IS COMPLETE
