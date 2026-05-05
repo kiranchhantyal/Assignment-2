@@ -238,8 +238,16 @@ firstTeam = null;
 	 */
     public String toString()
     {
-COMPLETE ME! // to get past the compiler, use: return "";
+ // to get past the compiler, use: return "";
+ String result = "";
+    Node current = firstTeam;
+    while (current != null) {
+        Cluster c = (Cluster) current.getData();
+        result += c.toString();
+        current = current.getNext();
     }
+    return result;
+}
 
 private int getStat(Player p, char x) {
     switch (x) {
