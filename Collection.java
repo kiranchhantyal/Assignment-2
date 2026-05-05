@@ -202,8 +202,27 @@ firstTeam = null;
 	 */
     public void summarise(String t)
     {
-COMPLETE ME! 
+        // check empty
+    if (isEmpty()) {
+            System.out.println("No data!");
+            return;
+
     }
+    Node current = firstTeam;
+    // traverse teams
+    while (current != null) {
+        Cluster c = (Cluster) current.getData();
+        Player first = c.getFirstPlayer();
+        if (first != null && first.getTeam().equals(t)) {
+          // Print summary if team is found
+            System.out.println(c.summary());
+            return;
+        }
+        current = current.getNext();
+    }
+    // team not found
+    System.out.println("Team " + t + " not found!");
+}
 
 	/**
 	 * toString()
