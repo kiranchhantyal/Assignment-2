@@ -175,7 +175,7 @@ firstTeam = null;
         Cluster c = (Cluster) current.getData();
         Player p = c.most(x);
         if (p != null) {
-            if (best == null || p.getStat(x) >= best.getStat(x)) {
+            if (best == null || getStat(p, x) >= getStat(best, x)) {
                 best = p;
             }
         }
@@ -221,4 +221,20 @@ COMPLETE ME!
     {
 COMPLETE ME! // to get past the compiler, use: return "";
     }
-}
+
+private int getStat(Player p, char x) {
+    switch (x) {
+        case 'a':
+            return p.getFreesAgainst();
+        case 'c':
+            return p.getClangers();
+        case 'd':
+            return p.getDisposals();
+        case 'g':
+            return p.getGoals();
+        case 'm':
+            return p.getGames();
+        default:
+            return 0;
+    }
+}}
