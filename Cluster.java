@@ -196,7 +196,7 @@ protected Node firstPlayer;
     {
         return "";
     }
-	Player total = new Player("Total","", 0, 0, 0, 0, 0);
+Player total = new Player("Total", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0);
 Node current = firstPlayer;
 while (current != null)
 {

@@ -3,8 +3,8 @@
  * 
  * KIT107 Assignment 2 -- Cluster Specification
  * 
- * @author Julian Dermoudy
- * @version	23/3/2026
+ * @author Kiran Chhantyal(770872)
+ * @version	6/5/2026
  * 
  * FILE IS COMPLETE
  */
