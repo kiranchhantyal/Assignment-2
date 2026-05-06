@@ -65,10 +65,12 @@ firstTeam = null;
         Node previous = null;
 
         // check if team already exists
-        while (current != null) {
+        while (current != null) 
+            {
             Cluster c = (Cluster) current.getData();
             Player first = c.getFirstPlayer();
-            if(first != null && first.getTeam().equals(p.getTeam())) {
+            if(first != null && first.getTeam().equals(p.getTeam())) 
+            {
                 c.addPlayerToCluster(p);
                 return;
             }
@@ -91,7 +93,7 @@ firstTeam = null;
             {
             break;
 
-        }
+            }
         previous = current;
         current = current.getNext();
     }
@@ -118,7 +120,8 @@ firstTeam = null;
 	 */
     public void showPlayerHistogram()
     {
-     if (isEmpty()) {
+     if (isEmpty()) 
+        {
         System.out.println("No data!");
         return;
         }
@@ -129,7 +132,8 @@ firstTeam = null;
              {
             Cluster c = (Cluster) current.getData();
             Player first = c.getFirstPlayer();
-            if (first != null) {
+            if (first != null) 
+                {
                 String teamName = first.getTeam();
                 int count = c.countPlayers();
 
@@ -137,7 +141,8 @@ firstTeam = null;
                 System.out.print(" " + teamName + " | ");
 
                 // print stars
-                for(int i = 0; i < count; i++) {
+                for(int i = 0; i < count; i++) 
+                    {
                     System.out.print("*");
                 }
                 // print count
@@ -166,16 +171,19 @@ firstTeam = null;
     public String most(char x)
     {
  // to get past the compiler, use: return "";
- if (isEmpty()) {
+ if (isEmpty())
+    {
         return "No data!";
     }
     Node current = firstTeam;
     Player best = null;
-    while (current != null) {
+    while (current != null) 
+        {
         Cluster c = (Cluster) current.getData();
         Player p = c.most(x);
         if (p != null) {
-            if (best == null || getStat(p, x) >= getStat(best, x)) {
+            if (best == null || getStat(p, x) >= getStat(best, x)) 
+                {
                 best = p;
             }
         }
@@ -210,7 +218,8 @@ firstTeam = null;
     }
     Node current = firstTeam;
     // traverse teams
-    while (current != null) {
+    while (current != null)
+         {
         Cluster c = (Cluster) current.getData();
         Player first = c.getFirstPlayer();
         if (first != null && first.getTeam().equals(t)) {
@@ -250,8 +259,10 @@ firstTeam = null;
     return result;
 }
 
-private int getStat(Player p, char x) {
-    switch (x) {
+private int getStat(Player p, char x)
+ {
+    switch (x) 
+    {
         case 'a':
             return p.getFreesAgainst();
         case 'c':
