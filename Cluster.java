@@ -168,17 +168,17 @@ if (isEmpty()) // to get past the compiler, use: return null;
 	Node current = firstPlayer;
 	Player best = (Player) current.getData();
 	while (current != null)
-		Player p = (Player) current.getData();
-	if (getStat(p, x) >= getStat(best, x))
 	{
-		best = p;
+		Player p = (Player) current.getData();
+		if (getStat(p, x) >= getStat(best, x))
+		{
+			best = p;
+		}
+	
+		current = current.getNext();
 	}
-	current = current.getNext();
+	return best;
 }
-return best;
-
-}
-
     /**
 	 * summary()
 	 * 
