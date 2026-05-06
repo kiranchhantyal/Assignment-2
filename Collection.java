@@ -6,6 +6,9 @@
  * @author Kiran Chhantyal(770872)
  * @version	6/5/2026
  */
+Activity
+c.A list would be a good choice for storing the players in each football team. The assignment needs players to be added, searched, updated, and printed in alphabetical order, which are all operations that work well with a list structure.
+d.A linked list is suitable for storing the football teams because teams can be added dynamically while keeping them in alphabetical order. It also makes traversal through the collection simple when processing the data.
 
 
 public class Collection implements CollectionInterface
