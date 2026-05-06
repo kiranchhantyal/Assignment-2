@@ -209,7 +209,7 @@ return total.toString();
 	}
 	/**
 	 * toString()
-	 * 
+	 
 	 * @return String -- printable form of the Cluster of players
 	 * 
 	 * Precondition: None
