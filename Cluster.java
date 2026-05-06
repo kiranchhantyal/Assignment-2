@@ -3,8 +3,8 @@
  * 
  * KIT107 Assignment 2 -- Cluster Implementation
  * 
- * @author <<your name and student ID number>>
- * @version	<<date of completion>>
+ * @author Kiran Chhantyal(770872)
+ * @version	5/5/2026
  */
 
 
@@ -43,7 +43,7 @@ protected Node firstPlayer;
 	 */
     public boolean isEmpty()
     {
-return firstPlayer == null; // to get past the compiler, use: return true;
+	return firstPlayer == null; // to get past the compiler, use: return true;
     }
 
     /**
@@ -107,7 +107,7 @@ return firstPlayer == null; // to get past the compiler, use: return true;
 	 */
     public Player getFirstPlayer()
     {
-        if (firstPlayer != null)
+        if (firstPlayer == null)
 		{
 			return null;
 		}
