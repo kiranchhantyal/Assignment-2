@@ -194,17 +194,18 @@ if (isEmpty()) // to get past the compiler, use: return null;
  // to get past the compiler, use: return "";
  if (isEmpty())
     {
-        return "No data.";
+        return "";
     }
-	Player total = new Player("Total", 0, 0, 0, 0, 0, 0, 0, 0,0 );
+	Player total = new Player("Total","", 0, 0, 0, 0, 0);
 Node current = firstPlayer;
 while (current != null)
 {
 
 	total.update((Player) current.getData());
 	current = current.getNext();
-}}
+}
 return total.toString();
+	}
 	/**
 	 * toString()
 	 * 
