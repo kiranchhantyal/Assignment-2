@@ -129,7 +129,7 @@ protected Node firstPlayer;
         int count = 0;
         Node current = firstPlayer;
         while (current != null)
-        {core C
+        {
             count++;
             current = current.getNext();
         }
