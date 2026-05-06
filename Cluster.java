@@ -234,8 +234,8 @@ private int getStat(Player p, char x)
 	switch (x)
 	{
 		case 'a': return p.getFreesAgainst();
-		case 'd': return p.getClangers();
-		case 'c': return p.getDisposals();
+		case 'c': return p.getClangers();
+		case 'd': return p.getDisposals();
 		case 'g': return p.getGoals();
 		case 'm': return p.getGames();
 		default: return 0;
