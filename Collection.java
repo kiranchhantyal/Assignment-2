@@ -3,8 +3,8 @@
  * 
  * KIT107 Assignment 2 -- Collection Implementation
  * 
- * @author <<your name and student ID number>>
- * @version	<<date of completion>>
+ * @author Kiran Chhantyal(770872)
+ * @version	6/5/2026
  */
 
 
@@ -241,7 +241,8 @@ firstTeam = null;
  // to get past the compiler, use: return "";
  String result = "";
     Node current = firstTeam;
-    while (current != null) {
+    while (current != null) 
+        {
         Cluster c = (Cluster) current.getData();
         result += c.toString();
         current = current.getNext();
