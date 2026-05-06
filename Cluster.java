@@ -75,8 +75,21 @@ protected Node firstPlayer;
 			current = current.getNext();
 		
 		}
-		No
-		if (previous == null && ((Player) current.getData()).getName().compareTo(p.getName())< 0)
+		Node newNode = new Node(p);
+		current = firstPlayer;
+		previous = null;
+		while (current != null)
+		{
+			Player existing = (Player) current.getData();
+			if (existing.getName().compareTo(p.getName()) > 0)
+			{
+				break;
+			}
+			previous = current;
+			current = current.getNext();
+			
+		}
+		if (previous == null)
 		{
 			newNode.setNext(firstPlayer);
 			firstPlayer = newNode;
@@ -86,22 +99,13 @@ protected Node firstPlayer;
 			newNode.setNext(current);
 			previous.setNext(newNode);
 		}
-	
+	}
  	/**
 	 * getFirstPlayer()
 	 * 
 	 * @return Player -- the first player in the cluster
-    while (current != null)
-	{
 
-	}
-	}
-
- 	/**
-	 * getFirstPlayer()
-	 * 
-	 * @return Player -- the first player in the cluster
-	 * 
+	 
 	 * Precondition: None
 	 * Postcondition: the first player in the cluster is returned if the
      *                  cluster is non-empty; null is returned otherwise.
