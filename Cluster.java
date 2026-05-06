@@ -161,7 +161,7 @@ protected Node firstPlayer;
 	 */
     public Player most(char x)
     {
-if (isEmpty()) // to get past the compiler, use: return null;
+		if (isEmpty()) // to get past the compiler, use: return null;
     {
 		return null;
 	}
