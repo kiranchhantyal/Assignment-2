@@ -258,7 +258,7 @@ firstTeam = null;
     }
     return result;
 }
-
+// helper method to generate histogram stats
 private int getStat(Player p, char x)
  {
     switch (x) 
