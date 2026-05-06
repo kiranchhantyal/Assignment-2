@@ -6,7 +6,9 @@
  * @author Kiran Chhantyal(770872)
  * @version	6/5/2026
  */
-
+ Activity
+ a.A list would be a good choice for storing the players in each football team. The assignment needs players to be added, searched, updated, and printed in alphabetical order, which are all operations that work well with a list structure.
+ b.A list would be a good choice for storing the players in each football team. The assignment needs players to be added, searched, updated, and printed in alphabetical order, which are all operations that work well with a list structure.
 
 public class Cluster implements ClusterInterface
 {
