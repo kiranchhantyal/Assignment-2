@@ -104,8 +104,7 @@ protected Node firstPlayer;
 	 * getFirstPlayer()
 	 * 
 	 * @return Player -- the first player in the cluster
-
-	 
+	 * 
 	 * Precondition: None
 	 * Postcondition: the first player in the cluster is returned if the
      *                  cluster is non-empty; null is returned otherwise.
