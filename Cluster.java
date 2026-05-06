@@ -62,7 +62,7 @@ protected Node firstPlayer;
 
 		Node current = firstPlayer;
 		Node previous = null;
-		// Step 1: check if payer exists -> merge
+		// Step 1: check if player already exists
 		while (current != null)
 		{
 			Player existing =(Player) current.getData();
@@ -73,7 +73,9 @@ protected Node firstPlayer;
 			}
 			previous = current;
 			current = current.getNext();
+		
 		}
+		No
 		if (previous == null && ((Player) current.getData()).getName().compareTo(p.getName())< 0)
 		{
 			newNode.setNext(firstPlayer);
