@@ -130,6 +130,7 @@ protected Node firstPlayer;
      *                  returned.
 	 * Informally: Produce a count of players within the current Cluster.
 	 */
+	// counts the number of players in the cluster
     public int countPlayers()
     {
         int count = 0;
